@@ -196,6 +196,12 @@ d) Delete this remote
 y/e/d> y
 ```
 
+### Box with SSO ###
+
+When using rclone with a box enterprise account that uses SSO via OKTA, first launch your browser and go through the SSO to get to box via box’s web interface. Then, once your browser already has a session established with Box and doesn’t need to visit your SSO provider for every new transaction, do the rclone config command and let it use rclone’s own client_id and client_secret. 
+
+Rclone will launch your browser, make sure you select the option to use SSO and provide the email address of the same box account to which you have already logged in, and it should take you to the “accept” page.
+
 ### Modified time and hashes ###
 
 Box allows modification times to be set on objects accurate to 1
